@@ -1,4 +1,4 @@
-import HpDispatcher from "./HpDispatcher";
+import {HpDispatcher} from "./Dispatchers";
 import HpActionTypes from "./HpActionTypes"
 
 const Actions = {

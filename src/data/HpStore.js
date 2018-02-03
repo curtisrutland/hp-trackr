@@ -1,6 +1,6 @@
 import { OrderedMap, is } from "immutable";
 import { ReduceStore } from "flux/utils";
-import HpDispatcher from "./HpDispatcher";
+import { HpDispatcher } from "./Dispatchers";
 import HpActionTypes from "./HpActionTypes";
 import HpEvent from "./HpEvent";
 

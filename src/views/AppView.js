@@ -1,24 +1,12 @@
-import React, { Fragment } from "react";
-
-const Header = ({ currentHp }) => (
-    <header>
-        {`Current HP: ${currentHp}`}
-    </header>
-);
-
-const HpEvent = ({ hp, currentHp, id }) => <li>Hp: {hp}, Current Hp: {currentHp}; Id: {id}</li>;
-
-const Main = ({ events }) => (
-    <div>
-        {[...events.values()].reverse().map(evt => <HpEvent key={evt.id} id={evt.id} hp={evt.hp} currentHp={evt.currentHp} />)}
-    </div>
-);
+import React from "react";
+import HpListView from "./HpListView";
+import HeaderView from "./HeaderView";
 
 const AppView = props => (
-    <Fragment>
-        <Header {...props} />
-        <Main {...props} />
-    </Fragment>
+    <div id="app">
+        <HeaderView currentHp={props.currentHp} />
+        <HpListView events={props.events} />
+    </div>
 );
 
 export default AppView;
